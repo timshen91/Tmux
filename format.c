@@ -751,7 +751,7 @@ format_cb_current_path(struct format_tree *ft, struct format_entry *fe)
 	if (wp == NULL)
 		return;
 
-	cwd = osdep_get_cwd(wp->fd);
+	cwd = osdep_get_cwd(wp->pid);
 	if (cwd != NULL)
 		fe->value = xstrdup(cwd);
 }
